@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-// import { Container } from './styles';
 
+import AuthLayout from '../pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
 
 export default function RouterWrapper({
@@ -10,11 +10,16 @@ export default function RouterWrapper({
   ...rest
 }) {
 
+  const signed = true;
 
+  const Layout = signed ? DefaultLayout : AuthLayout;
 
   return (
-    <DefaultLayout>
-      <Route {...rest} />
-    </DefaultLayout>
+      <Route {...rest} render={props => (
+      <Layout>
+        <Component {...props} />
+      </Layout>)} />
+
+
   );
 }

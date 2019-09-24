@@ -3,20 +3,16 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import logo from '../../assets/logo.svg';
 
-export default function Login() {
-
-  function handleSubmit() {
-
-  }
-
+export default function SignUp() {
   return (
     <>
       <img src={logo} />
-      <Form onSubmit={handleSubmit} >
+      <Form>
+        <Input name="name" type="text" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <Input name="password" type="password" placeholder="Sua senha secreta" />
-        <button type="submit" >Acessar</button>
-        <Link to="/signup" >Criar conta gratuita</Link>
+        <button type="submit" >Criar conta</button>
+        <Link to="/" >Já tenho login</Link>
       </Form>
     </>
   );
