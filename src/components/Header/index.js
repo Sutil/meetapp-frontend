@@ -8,7 +8,7 @@ export default function Header() {
     <Container >
       <Content>
         <Link to="/" >
-          <img src={logo} />
+          <img src={logo} alt="Meetup logo" />
         </Link>
         <aside>
           <Profile>

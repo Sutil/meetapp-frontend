@@ -16,6 +16,11 @@ export const Content = styled.div`
   align-items: center;
   padding: 0 20px;
 
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
   aside {
     display: flex;
     flex-direction: row;
