@@ -38,4 +38,39 @@ export const Content = styled.div`
 `
 
 export const Meetup = styled.div`
+
+  margin-top: 30px;
+
+  img {
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  p {
+    margin-top: 30px;
+    color: #fff;
+  }
+
+  div {
+    color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    svg {
+        margin-right: 5px;
+    }
+
+    time, span {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
 `;

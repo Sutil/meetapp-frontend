@@ -54,7 +54,7 @@ export default function ImageInput({value, name}) {
       <label htmlFor="image">
         {
           preview
-          ? <img src={preview} alt="Avatar" />
+          ? <img src={preview} alt="Meetup" />
           : <div>Selecione uma imagem</div>
         }
 
