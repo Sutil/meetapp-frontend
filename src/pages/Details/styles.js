@@ -9,6 +9,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 600px;
   padding: 20px 0;
@@ -27,8 +28,14 @@ export const Content = styled.div`
         margin: 0 5px;
         color: #fff;
         font-weight: bold;
-      }
 
+        :nth-child(1) {
+          background: ${colors.blue};
+        }
+      }
     }
   }
 `
+
+export const Meetup = styled.div`
+`;
