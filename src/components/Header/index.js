@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { Container, Content, Profile } from './styles';
 import logo from '../../assets/logo.svg';
+import { signOut } from '../../store/modules/auth/actions';
 
 export default function Header() {
+
+  const dispatch = useDispatch();
+
+  function handleSignOut() {
+    dispatch(signOut());
+  }
+
   return (
     <Container >
       <Content>
@@ -15,7 +24,7 @@ export default function Header() {
             <strong>Eduardo Sutil</strong>
             <Link to="/profile" >Meu perfil</Link>
           </Profile>
-          <button type="button">SAIR</button>
+          <button type="button" onClick={handleSignOut} >SAIR</button>
         </aside>
       </Content>
 
