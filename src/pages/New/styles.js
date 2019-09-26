@@ -46,6 +46,30 @@ export const Content = styled.div`
     }
 
     /* date picker */
+
+    .react-datetime-picker {
+      background: rgba(0,0,0,.2);
+      border-radius: 4px;
+
+      div {
+        border: none;
+      }
+
+      input {
+        height: unset;
+        background: none;
+      }
+
+      span {
+        color: #fff;
+      }
+
+      svg  {
+        stroke: #fff;
+      }
+
+    }
+
     div div {
       input {
         width: 100%;

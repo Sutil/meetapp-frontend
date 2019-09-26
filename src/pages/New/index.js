@@ -14,7 +14,7 @@ export default function New({match}) {
   const [image, setImage] = useState(null);
   const [id, setId] = useState(null);
 
-
+  console.log('teste')
 
   useEffect(() => {
     async function loadMeetup() {

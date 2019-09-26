@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import ReactDatePicker from 'react-datepicker';
+import ReactDatetimePicker from 'react-datetime-picker';
 import { parseISO } from 'date-fns';
-import pt from 'date-fns/locale/pt';
 import { useField } from '@rocketseat/unform';
 
 import 'react-datepicker/dist/react-datepicker.css';
@@ -15,7 +14,7 @@ export default function DatePicker({ name, value }) {
     registerField({
       name: fieldName,
       ref: ref.current,
-      path: 'props.selected',
+      path: 'props.value',
       clearValue: pickerRef => {
         pickerRef.clear();
       },
@@ -28,19 +27,21 @@ export default function DatePicker({ name, value }) {
     }
   }, [value])
 
+  console.log(selected);
   return (
     <>
-      <ReactDatePicker
+
+      <ReactDatetimePicker
         placeholderText="Data do meetup"
         name={fieldName}
-        selected={selected}
-        onChange={date => setSelected(date)}
-        dateFormat="dd/MM/yyyy"
+        value={selected}
+        onChange={date => {setSelected(date)}}
         ref={ref}
+        disableClock={true}
         previousMonthButtonLabel="<"
         nextMonthButtonLabel=">"
-        locale={pt}
-      />
+        locale="pt"
+       />
       {error && <span>{error}</span>}
     </>
   );

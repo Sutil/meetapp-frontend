@@ -6,6 +6,8 @@ import api from '~/services/api';
 
 export default function ImageInput({value, name}) {
 
+  console.log('image input')
+
   let { defaultValue, registerField } = useField('image');
 
   if(!defaultValue) {
